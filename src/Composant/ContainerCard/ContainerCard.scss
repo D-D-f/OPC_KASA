@@ -1,4 +1,10 @@
 .container_card {
   background-color: #f6f6f6;
   border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

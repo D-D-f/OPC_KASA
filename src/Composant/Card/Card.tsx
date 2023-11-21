@@ -7,7 +7,7 @@ interface CardProps {
 const Card = ({ title }: CardProps) => {
   return (
     <div className="card">
-      <h2>{title}</h2>
+      <h3>{title}</h3>
     </div>
   );
 };
