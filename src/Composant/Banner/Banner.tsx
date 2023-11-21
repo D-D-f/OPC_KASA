@@ -1,3 +1,5 @@
+import "./Banner.scss";
+
 interface BannerProps {
   path: string;
 }
@@ -13,7 +15,7 @@ const Banner = ({ path }: BannerProps) => {
   };
 
   return (
-    <div style={{ ...styleBanner }}>
+    <div style={{ ...styleBanner }} className="banner">
       <h2>Chez vous, partout et ailleurs</h2>
     </div>
   );
