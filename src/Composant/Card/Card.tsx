@@ -1,13 +1,13 @@
 import "./Card.scss";
 
 interface CardProps {
-  name: string;
+  title: string;
 }
 
-const Card = ({ name }: CardProps) => {
+const Card = ({ title }: CardProps) => {
   return (
     <div className="card">
-      <h3>{name}</h3>
+      <h2>{title}</h2>
     </div>
   );
 };

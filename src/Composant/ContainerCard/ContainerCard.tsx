@@ -1,12 +1,16 @@
 import "./ContainerCard.scss";
 import Card from "../Card/Card";
 
-const ContainerCard = () => {
-  return (
-    <section className="container_card">
-      <Card name="Location" />
-    </section>
-  );
+interface ContainerCardProps {
+  data: { title: string; id: string }[];
+}
+
+const ContainerCard = ({ data }: ContainerCardProps) => {
+  const displayCard = data?.map((card) => {
+    return <Card key={card.id} title={card.title} />;
+  });
+
+  return <section className="container_card">{displayCard}</section>;
 };
 
 export default ContainerCard;
