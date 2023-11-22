@@ -1,5 +1,13 @@
 .card {
   width: 28%;
-  border: 1px solid black;
+  height: 340px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  h3 {
+    color: white;
+    padding-left: 15px;
+  }
 }

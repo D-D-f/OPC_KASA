@@ -8,7 +8,6 @@ const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 const App = () => {
   const { data, error, isLoading } = useSWR("./public/data.json", fetcher);
-
   if (error) throw new Error("Unable to recover data");
   if (isLoading) return "Loading";
 
