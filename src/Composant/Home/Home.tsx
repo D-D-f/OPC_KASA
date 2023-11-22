@@ -3,7 +3,7 @@ import ImgBanner from "../../assets/banner.png";
 import Banner from "../Banner/Banner";
 
 interface HomeProps {
-  data: { id: string; title: string; cover: string }[];
+  data: [];
 }
 
 const Home = ({ data }: HomeProps) => {

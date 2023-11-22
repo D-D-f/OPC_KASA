@@ -1,6 +1,12 @@
-.card {
+a {
   width: 28%;
   height: 340px;
+  text-decoration: none;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;

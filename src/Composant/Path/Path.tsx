@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Home/Home";
 
 interface PathProps {
-  data: { title: string; id: string }[];
+  data: [];
 }
 
 const Path = ({ data }: PathProps) => {
