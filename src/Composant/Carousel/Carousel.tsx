@@ -22,6 +22,7 @@ const Carousel = ({ pictures }: CarouselProps) => {
     backgroundImage: `url(${pictures[indexPicture]})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
     width: "100%",
     height: "415px",
     display: "flex",
