@@ -1,5 +1,6 @@
 import Logo from "../Logo/Logo";
 import Navigation from "../Navigation/Navigation";
+import { NavLink } from "react-router-dom";
 import LogoHeader from "../../assets/LOGO.svg";
 import "./Header.scss";
 
@@ -11,8 +12,10 @@ const Header = () => {
 
   return (
     <header>
-      <Logo style={{ ...styleLogo }} path={LogoHeader} />
-      <Navigation />
+      <NavLink to="/">
+        <Logo style={{ ...styleLogo }} path={LogoHeader} />
+        <Navigation />
+      </NavLink>
     </header>
   );
 };
