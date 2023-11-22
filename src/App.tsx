@@ -1,9 +1,7 @@
 import "./App.scss";
 import Header from "./Composant/Header/Header";
 import Footer from "./Composant/Footer/Footer";
-import Banner from "./Composant/Banner/Banner";
-import ImgBanner from "./assets/banner.png";
-import ContainerCard from "./Composant/ContainerCard/ContainerCard";
+import Path from "./Composant/Path/Path";
 import useSWR from "swr";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -18,8 +16,7 @@ const App = () => {
     <div className="page">
       <main className="App">
         <Header />
-        <Banner path={ImgBanner} />
-        <ContainerCard data={data} />
+        <Path data={data} />
       </main>
       <Footer />
     </div>
