@@ -1,4 +1,11 @@
-.App {
-  margin: auto;
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.container {
   width: 80%;
+  margin: auto;
 }

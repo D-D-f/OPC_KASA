@@ -13,9 +13,11 @@ const App = () => {
 
   return (
     <div className="page">
-      <main className="App">
-        <Header />
-        <Path data={data} />
+      <main>
+        <div className="container">
+          <Header />
+          <Path data={data} />
+        </div>
       </main>
       <Footer />
     </div>
