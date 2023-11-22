@@ -1,0 +1,13 @@
+.arrow {
+  height: 50px;
+  width: 50px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+}

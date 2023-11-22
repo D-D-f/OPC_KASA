@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Carousel.scss";
 
 interface CarouselProps {
   pictures: string[];
@@ -23,6 +24,8 @@ const Carousel = ({ pictures }: CarouselProps) => {
     backgroundSize: "cover",
     width: "100%",
     height: "415px",
+    display: "flex",
+    justifyContent: "space-between",
   };
 
   return (
@@ -31,11 +34,13 @@ const Carousel = ({ pictures }: CarouselProps) => {
         onClick={() => changeImage("left", indexPicture)}
         src="./src/assets/left.png"
         alt="arrow previous"
+        className="arrow"
       />
       <img
         onClick={() => changeImage("right", indexPicture)}
         src="./src/assets/right.png"
         alt="arrow next"
+        className="arrow"
       />
     </div>
   );
