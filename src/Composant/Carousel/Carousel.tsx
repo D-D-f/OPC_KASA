@@ -39,6 +39,9 @@ const Carousel = ({ pictures }: CarouselProps) => {
         alt="arrow previous"
         className="arrow"
       />
+      <span className="numberPicture">{`${indexPicture + 1}/${
+        pictures.length
+      }`}</span>
       <img
         onClick={() => changeImage("right", indexPicture)}
         src="./src/assets/right.png"

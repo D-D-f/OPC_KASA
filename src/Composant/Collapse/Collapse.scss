@@ -1,0 +1,39 @@
+.collapse {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ff6060;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    padding-left: 10px;
+    color: white;
+  }
+
+  span img {
+    padding-right: 10px;
+  }
+}
+
+.containerCollapse {
+  width: 100%;
+}
+
+.descri ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.descriptionP {
+  margin: 0;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}

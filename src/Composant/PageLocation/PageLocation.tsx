@@ -4,6 +4,8 @@ import Title from "../Title/Title";
 import NameProfil from "../NameProfil/NameProfil";
 import Star from "../Star/Star";
 import Tag from "../Tag/Tag";
+import Collapse from "../Collapse/Collapse";
+import CollapseEquipment from "../CollapseEquipment/CollapseEquipment";
 import "./PageLocation.scss";
 
 interface location {
@@ -15,6 +17,8 @@ interface location {
   host: { name: string; picture: string };
   tags: [];
   rating: string;
+  description: string;
+  equipments: [];
 }
 
 interface PageLocationProps {
@@ -22,6 +26,7 @@ interface PageLocationProps {
 }
 const PageLocation = ({ data }: PageLocationProps) => {
   const { id } = useParams();
+  console.log(data);
   const locations = data
     .filter((location) => location.id === id)
     .flatMap((location) => {
@@ -30,20 +35,28 @@ const PageLocation = ({ data }: PageLocationProps) => {
           <section>
             <Carousel pictures={location.pictures} />
           </section>
-          <section className="nameProfil">
+          <div className="nameProfil">
             <div>
               <Title text={location.title} />
               <h4>{location.location}</h4>
             </div>
             <NameProfil name={location.host.name} img={location.host.picture} />
-          </section>
-          <section className="tag_star">
+          </div>
+          <div className="tag_star">
             <div>
               <Tag tags={location.tags} />
             </div>
             <div>
               <Star rating={location.rating} />
             </div>
+          </div>
+
+          <section className="description_equipement">
+            <Collapse description={location.description} text="Description" />
+            <CollapseEquipment
+              equipment={location.equipments}
+              text="Équipements"
+            />
           </section>
         </div>
       );

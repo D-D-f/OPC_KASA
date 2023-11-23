@@ -10,4 +10,13 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 25px;
+  position: relative;
+}
+
+.numberPicture {
+  position: absolute;
+  bottom: 23px;
+  left: 50%;
+  color: white;
+  font-weight: bold;
 }
