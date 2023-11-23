@@ -10,7 +10,9 @@ const Carousel = ({ pictures }: CarouselProps) => {
 
   const changeImage = (position: string, id: number) => {
     if (position === "left") {
-      id === 0 ? setIndexPicture(4) : setIndexPicture((curr) => curr - 1);
+      id === 0
+        ? setIndexPicture(pictures.length - 1)
+        : setIndexPicture((curr) => curr - 1);
     } else if (position === "right") {
       id === pictures.length - 1
         ? setIndexPicture(0)
