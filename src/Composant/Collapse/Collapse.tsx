@@ -1,4 +1,5 @@
 import "./Collapse.scss";
+import { useState } from "react";
 import arrow from "../../assets/arrowTop.png";
 
 interface CollapseProps {
@@ -7,16 +8,24 @@ interface CollapseProps {
 }
 
 const Collapse = ({ text, description }: CollapseProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="containerCollapse">
-      <div className="collapse">
+    <div className={`containerCollapse ${isOpen ? "open" : ""}`}>
+      <div className="collapse" onClick={toggleCollapse}>
         <p>{text}</p>
         <span>
-          <img src={arrow} alt="arrow" />
+          <img className={isOpen ? "arrowOpen" : ""} src={arrow} alt="arrow" />
         </span>
       </div>
-      <div className="descri">
-        <p className="descriptionP">{description}</p>
+      <div className={`descri ${isOpen ? "open" : ""}`}>
+        <ul>
+          <li>{description}</li>
+        </ul>
       </div>
     </div>
   );

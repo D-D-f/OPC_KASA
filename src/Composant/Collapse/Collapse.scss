@@ -5,6 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
 
   p {
     padding-left: 10px;
@@ -13,11 +15,28 @@
 
   span img {
     padding-right: 10px;
+    transition: transform 0.5s ease; /* Ajout de la transition pour la rotation */
   }
+}
+
+.containerCollapse.open .collapse img {
+  transform: rotate(-180deg);
+  padding-left: 10px;
 }
 
 .containerCollapse {
   width: 100%;
+  overflow: hidden;
+}
+
+.descri {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.containerCollapse.open .descri {
+  max-height: 500px;
 }
 
 .descri ul {
@@ -27,7 +46,8 @@
   padding: 20px;
   background-color: #f6f6f6;
   border-bottom-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #ff6060;
 }
 
 .descriptionP {
@@ -35,5 +55,10 @@
   padding: 20px;
   background-color: #f6f6f6;
   border-bottom-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #ff6060;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
 }
