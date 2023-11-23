@@ -5,8 +5,8 @@ interface TagProps {
 }
 
 const Tag = ({ tags }: TagProps) => {
-  const tag = tags.map((tag) => (
-    <div className="tag">
+  const tag = tags.map((tag, index) => (
+    <div key={index} className="tag">
       <span>{tag}</span>
     </div>
   ));

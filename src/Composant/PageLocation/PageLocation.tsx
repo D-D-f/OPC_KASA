@@ -37,7 +37,7 @@ const PageLocation = ({ data }: PageLocationProps) => {
             </div>
             <NameProfil name={location.host.name} img={location.host.picture} />
           </section>
-          <section>
+          <section className="tag_star">
             <div>
               <Tag tags={location.tags} />
             </div>
@@ -48,7 +48,6 @@ const PageLocation = ({ data }: PageLocationProps) => {
         </div>
       );
     });
-  console.log(data);
   return <div>{locations}</div>;
 };
 

@@ -1,12 +1,26 @@
+import { useId } from "react";
+
 interface StarProps {
   rating: string;
 }
 
 const Star = ({ rating }: StarProps) => {
-  const numberStar: number = Number(rating);
-  console.log(numberStar);
+  const id = useId();
 
-  return <div></div>;
+  const numberStar: number = Number(rating);
+  const allStars = new Array(5).fill(0).map((_, index) => {
+    const starType = index < numberStar ? "active" : "inactive";
+    return {
+      key: `${id}-${starType}-${index}`,
+      src: `./src/assets/star-${starType}.png`,
+    };
+  });
+
+  const displayStar = allStars.map((star) => (
+    <img key={star.key} src={star.src} alt="star" />
+  ));
+
+  return <div>{displayStar}</div>;
 };
 
 export default Star;
