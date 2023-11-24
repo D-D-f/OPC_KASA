@@ -9,7 +9,7 @@ interface HomeProps {
 const Home = ({ data }: HomeProps) => {
   return (
     <>
-      <Banner path={ImgBanner} />
+      <Banner text="Chez vous, partout et ailleurs" path={ImgBanner} />
       <ContainerCard data={data} />
     </>
   );

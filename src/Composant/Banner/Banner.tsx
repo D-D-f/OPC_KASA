@@ -1,15 +1,16 @@
 import "./Banner.scss";
 interface BannerProps {
   path: string;
+  text: string;
 }
 
-const Banner = ({ path }: BannerProps) => {
+const Banner = ({ text, path }: BannerProps) => {
   return (
     <div
       style={{ "--linkImg": `url(${path})` } as React.CSSProperties}
       className="banner"
     >
-      <h2>Chez vous, partout et ailleurs</h2>
+      <h2>{text}</h2>
     </div>
   );
 };

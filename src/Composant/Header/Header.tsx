@@ -14,8 +14,8 @@ const Header = () => {
     <header>
       <NavLink to="/">
         <Logo style={{ ...styleLogo }} path={LogoHeader} />
-        <Navigation />
       </NavLink>
+      <Navigation />
     </header>
   );
 };
