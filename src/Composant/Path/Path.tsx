@@ -9,13 +9,13 @@ interface PathProps {
 }
 
 const Path = ({ data }: PathProps) => {
-  console.log("Current path: ", window.location.pathname);
   return (
     <Routes>
       <Route path="/" element={<Home data={data} />} />
       <Route path="/:id" element={<PageLocation data={data} />} />
       <Route path="/about" element={<About />} />
       <Route path="/error" element={<ErrorPage />} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 };

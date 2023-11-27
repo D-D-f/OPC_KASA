@@ -1,5 +1,5 @@
 import Carousel from "../Carousel/Carousel";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Title from "../Title/Title";
 import NameProfil from "../NameProfil/NameProfil";
 import Star from "../Star/Star";
@@ -7,6 +7,7 @@ import Tag from "../Tag/Tag";
 import Collapse from "../Collapse/Collapse";
 import CollapseEquipment from "../CollapseEquipment/CollapseEquipment";
 import "./PageLocation.scss";
+import { useEffect } from "react";
 
 interface location {
   id: string;
@@ -26,7 +27,15 @@ interface PageLocationProps {
 }
 const PageLocation = ({ data }: PageLocationProps) => {
   const { id } = useParams();
-  console.log(data);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkId = data.filter((location) => location.id === id);
+    if (checkId.length === 0) {
+      navigate("/error");
+    }
+  }, [id, data, navigate]);
+
   const locations = data
     .filter((location) => location.id === id)
     .flatMap((location) => {
