@@ -1,13 +1,45 @@
-.nameProfil,
-.tag_star {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .description_equipement {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
   gap: 10px;
+}
+
+.lieux {
+  color: #ff6060;
+}
+
+.profilLoc {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.nameProf {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+}
+
+@media screen and (max-width: 990px) {
+  .profilLoc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .nameProf {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .description_equipement {
+    display: flex;
+    flex-direction: column;
+  }
 }

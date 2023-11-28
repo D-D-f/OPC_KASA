@@ -1,5 +1,6 @@
 .name {
   display: flex;
+  justify-content: end;
   align-items: center;
 }
 
@@ -11,4 +12,7 @@
 
 .spanName {
   display: block;
+  color: #ff6060;
+  text-align: end;
+  margin-right: 10px;
 }

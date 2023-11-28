@@ -1,4 +1,5 @@
 import { useId } from "react";
+import "./Star.scss";
 
 interface StarProps {
   rating: string;
@@ -20,7 +21,7 @@ const Star = ({ rating }: StarProps) => {
     <img key={star.key} src={star.src} alt="star" />
   ));
 
-  return <div>{displayStar}</div>;
+  return <div className="allStar">{displayStar}</div>;
 };
 
 export default Star;

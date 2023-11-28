@@ -44,18 +44,18 @@ const PageLocation = ({ data }: PageLocationProps) => {
           <section>
             <Carousel pictures={location.pictures} />
           </section>
-          <div className="nameProfil">
+          <div className="profilLoc">
             <div>
               <Title text={location.title} />
-              <h4>{location.location}</h4>
-            </div>
-            <NameProfil name={location.host.name} img={location.host.picture} />
-          </div>
-          <div className="tag_star">
-            <div>
+              <h4 className="lieux">{location.location}</h4>
               <Tag tags={location.tags} />
             </div>
-            <div>
+
+            <div className="nameProf">
+              <NameProfil
+                name={location.host.name}
+                img={location.host.picture}
+              />
               <Star rating={location.rating} />
             </div>
           </div>
