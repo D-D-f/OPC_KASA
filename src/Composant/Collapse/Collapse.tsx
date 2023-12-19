@@ -1,13 +1,13 @@
 import "./Collapse.scss";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import arrow from "../../assets/arrowTop.png";
 
 interface CollapseProps {
   text: string;
-  description: string;
+  children: ReactNode;
 }
 
-const Collapse = ({ text, description }: CollapseProps) => {
+const Collapse = ({ text, children }: CollapseProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -23,9 +23,7 @@ const Collapse = ({ text, description }: CollapseProps) => {
         </span>
       </div>
       <div className={`descri ${isOpen ? "open" : ""}`}>
-        <ul>
-          <li>{description}</li>
-        </ul>
+        <ul className="ul_li">{children}</ul>
       </div>
     </div>
   );

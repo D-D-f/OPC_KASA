@@ -1,0 +1,20 @@
+#error-page,
+#error-page p a {
+  color: #ff6060;
+  font-size: 30px;
+}
+
+#error-page p a {
+  text-decoration: underline;
+}
+
+#error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 150px;
+  }
+}

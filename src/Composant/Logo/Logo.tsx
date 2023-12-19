@@ -4,7 +4,7 @@ interface LogoProps {
 }
 
 const Logo = ({ path, style }: LogoProps) => {
-  return <img style={style} src={path} alt="logo" />;
+  return <img id="logo" style={style} src={path} alt="logo" />;
 };
 
 export default Logo;

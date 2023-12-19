@@ -5,7 +5,6 @@ import NameProfil from "../NameProfil/NameProfil";
 import Star from "../Star/Star";
 import Tag from "../Tag/Tag";
 import Collapse from "../Collapse/Collapse";
-import CollapseEquipment from "../CollapseEquipment/CollapseEquipment";
 import "./PageLocation.scss";
 import { useEffect } from "react";
 
@@ -61,11 +60,14 @@ const PageLocation = ({ data }: PageLocationProps) => {
           </div>
 
           <section className="description_equipement">
-            <Collapse description={location.description} text="Description" />
-            <CollapseEquipment
-              equipment={location.equipments}
-              text="Équipements"
-            />
+            <Collapse text="Description">
+              <p>{location.description}</p>
+            </Collapse>
+            <Collapse text="Équipements">
+              {location.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </Collapse>
           </section>
         </div>
       );

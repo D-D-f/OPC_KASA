@@ -33,21 +33,25 @@ const Carousel = ({ pictures }: CarouselProps) => {
 
   return (
     <div style={{ ...styleCarousel }} className="carousel">
-      <img
-        onClick={() => changeImage("left", indexPicture)}
-        src="./src/assets/left.png"
-        alt="arrow previous"
-        className="arrow"
-      />
-      <span className="numberPicture">{`${indexPicture + 1}/${
-        pictures.length
-      }`}</span>
-      <img
-        onClick={() => changeImage("right", indexPicture)}
-        src="./src/assets/right.png"
-        alt="arrow next"
-        className="arrow"
-      />
+      {pictures.length > 1 && (
+        <>
+          <img
+            onClick={() => changeImage("left", indexPicture)}
+            src="./src/assets/left.png"
+            alt="arrow previous"
+            className="arrow"
+          />
+          <span className="numberPicture">{`${indexPicture + 1}/${
+            pictures.length
+          }`}</span>
+          <img
+            onClick={() => changeImage("right", indexPicture)}
+            src="./src/assets/right.png"
+            alt="arrow next"
+            className="arrow"
+          />
+        </>
+      )}
     </div>
   );
 };
